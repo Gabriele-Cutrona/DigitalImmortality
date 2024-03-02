@@ -21,7 +21,7 @@ body {
    margin-right: 8px;
 }
 
-/* all of these are under .maint */
+/* all of these are under .main */
 
 .mainlogo {
    max-width: clamp(250px, 90%, 650px);
@@ -109,4 +109,37 @@ body {
 
 .teamtext a:hover {
    color: hsl(250, 80%, 70%);
+}
+
+/* End of elements under .main */
+
+footer {
+   background-color: hsl(245, 10%, 5%);
+}
+
+footer ul {
+   display: flex;
+   list-style-type: none;
+   padding: 0;
+   gap: 16px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 8px;
+   margin: 0;
+}
+
+footer a {
+   color:hsl(250, 80%, 80%);
+   text-decoration: none;
+}
+
+footer a:hover {
+   color: hsl(250, 80%, 60%);
+}
+
+@media only screen and (min-width: 600px) {
+   footer ul {
+      flex-direction: row;
+   }
 }
