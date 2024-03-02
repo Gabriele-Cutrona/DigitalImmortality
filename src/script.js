@@ -10,7 +10,7 @@ closeBtn.addEventListener("click", () => {
    dialog.style.animation = "FadeOut 0.2s";
    dialog.addEventListener("animationend", function closeDialog() {
       dialog.close();
-      dialog.style.animation = "FadeIn 0.2gs";
+      dialog.style.animation = "FadeIn 0.2s";
       dialog.removeEventListener("animationend", closeDialog);
    });
 });
