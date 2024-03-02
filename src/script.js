@@ -1,11 +1,16 @@
 const dropdown = document.querySelector("nav .dropdown");
 const dialog = document.querySelector("nav dialog");
-const close = document.querySelector("nav .close")
+const closeBtn = document.querySelector("nav .close");
 
 dropdown.addEventListener("click", () => {
    dialog.showModal();
-})
+});
 
-close.addEventListener("click", () => {
-   dialog.close();
-})
+closeBtn.addEventListener("click", () => {
+   dialog.style.animation = "FadeOut 0.2s";
+   dialog.addEventListener("animationend", function closeDialog() {
+      dialog.close();
+      dialog.style.animation = "FadeIn 0.2gs";
+      dialog.removeEventListener("animationend", closeDialog);
+   });
+});

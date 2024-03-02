@@ -9,18 +9,18 @@ body {
    background-color: hsl(245, 10%, 7%);
 }
 
+/* NAVBAR */
+
+
 nav {
+   position: sticky;
    display: flex;
    justify-content: space-between;
    align-items: center;
    background-color: hsl(245, 10%, 5%);
    min-height: 64px;
-}
-
-nav a {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   top: 0;
+   width: 100%;
 }
 
 nav img {
@@ -41,21 +41,28 @@ nav ul {
    margin-right: 16px;
 }
 
-nav ul a {
-   color: hsl(245, 10%, 5%);
-   background-color: hsl(250, 80%, 70%);
-   padding: 8px;
-   text-decoration: none;
-   border-radius: 10px;
-   transition: border-radius 0.3s;
-}
-
-nav ul a:hover {
-   border-radius: 5px;
-}
-
 nav button {
    display: none;
+}
+
+@keyframes FadeIn {
+   from {
+      opacity: 0.5;
+   }
+
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes FadeOut {
+   from {
+      opacity: 1;
+   }
+
+   to {
+      opacity: 0;
+   }
 }
 
 nav dialog {
@@ -63,6 +70,7 @@ nav dialog {
    box-shadow: 0px 0px 10px black;
    border-radius: 4px;
    background-color: hsl(245, 10%, 5%);
+   animation: FadeIn 0.2s;
 }
 
 nav dialog div {
@@ -71,25 +79,50 @@ nav dialog div {
    gap: 16px;
 }
 
-nav dialog a {
+nav a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: hsl(245, 10%, 5%);
    color: hsl(250, 80%, 70%);
    padding: 8px;
    text-decoration: none;
    border-radius: 10px;
    transition: all 0.3s;
+   border-width: 3px;
+   border-color: hsl(250, 80%, 70%);
+   border-style: solid;
 }
 
-nav dialog a:hover {
+nav a:hover {
    background-color: hsl(250, 80%, 70%);
    color: hsl(245, 10%, 5%);
    border-radius: 5px;
 }
 
-nav dialog .close {
+.homebtn:hover, .homebtn {
+   background-color: transparent;
+   border-style: none;
+}
+
+.close {
    background-color: hsl(250, 80%, 70%);
    color: hsl(245, 10%, 5%);
    cursor: pointer;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 10px;
+   transition: all 0.3s;
+   border-style: solid;
+   border-color: hsl(250, 80%, 70%);
+}
+
+.close:hover {
+   border-radius: 5px;
+   background-color: hsl(245, 10%, 5%);
+   color: hsl(250, 80%, 70%);
 }
 
 @media only screen and (max-width: 500px) {
@@ -122,6 +155,9 @@ nav dialog .close {
       padding: 0;
    }
 }
+
+/* END NAVBAR */
+
 
 .title {
    font-size: 36px;
