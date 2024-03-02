@@ -9,6 +9,86 @@ body {
    background-color: hsl(245, 10%, 7%);
 }
 
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: hsl(245, 10%, 5%);
+   min-height: 64px;
+}
+
+nav a {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav img {
+   margin-left: 16px;
+   max-width: 48px;
+   border-radius: 10px;
+   transition: border-radius 0.2s;
+}
+
+nav img:hover {
+   border-radius: 5px;
+}
+
+nav ul {
+   display: flex;
+   list-style-type: none;
+   gap: 16px;
+   margin-right: 16px;
+}
+
+nav ul a {
+   color: hsl(245, 10%, 5%);
+   background-color: hsl(250, 80%, 70%);
+   padding: 8px;
+   text-decoration: none;
+   border-radius: 10px;
+   transition: border-radius 0.3s;
+}
+
+nav ul a:hover {
+   border-radius: 5px;
+}
+
+nav .btn {
+   display: none;
+}
+
+@media only screen and (max-width: 500px) {
+   nav ul {
+      display: none;
+   }
+
+   nav .btn {
+      display: flex;
+      margin: 0;
+      border-style: none;
+      background-color: transparent;
+      margin-right: 16px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: hsl(250, 80%, 70%);
+      border-radius: 10px;
+      transition: border-radius 0.3s;
+      height: 46px;
+      width: 48px;
+   }
+
+   nav .btn:hover {
+      border-radius: 5px;
+   }
+
+   nav .btn img {
+      margin: 0;
+      padding: 0;
+   }
+}
+
 .title {
    font-size: 36px;
    text-align: center;
@@ -24,7 +104,7 @@ body {
 /* all of these are under .main */
 
 .mainlogo {
-   max-width: clamp(250px, 90%, 650px);
+   max-width: clamp(250px, 90%, 750px);
    border-radius: 10px;
 }
 
@@ -65,13 +145,17 @@ body {
    justify-items: center;
    align-items: center;
    gap: 0px;
+   max-width: 1500px;
+}
+
+.maincontainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 48px;
 }
 
 @media only screen and (min-width: 600px) {
-   .main {
-      flex-direction: row;
-   }
-
    .bigtext {
       font-size: 24px;
    }
@@ -90,7 +174,7 @@ body {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   margin-top: 16px;
+   margin: 16px;
 }
 
 .teamtext h3,
@@ -130,7 +214,7 @@ footer ul {
 }
 
 footer a {
-   color:hsl(250, 80%, 80%);
+   color: hsl(250, 80%, 80%);
    text-decoration: none;
 }
 
