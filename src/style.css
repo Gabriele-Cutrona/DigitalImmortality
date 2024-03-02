@@ -54,8 +54,42 @@ nav ul a:hover {
    border-radius: 5px;
 }
 
-nav .btn {
+nav button {
    display: none;
+}
+
+nav dialog {
+   border-style: none;
+   box-shadow: 0px 0px 10px black;
+   border-radius: 4px;
+   background-color: hsl(245, 10%, 5%);
+}
+
+nav dialog div {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+nav dialog a {
+   background-color: hsl(245, 10%, 5%);
+   color: hsl(250, 80%, 70%);
+   padding: 8px;
+   text-decoration: none;
+   border-radius: 10px;
+   transition: all 0.3s;
+}
+
+nav dialog a:hover {
+   background-color: hsl(250, 80%, 70%);
+   color: hsl(245, 10%, 5%);
+   border-radius: 5px;
+}
+
+nav dialog .close {
+   background-color: hsl(250, 80%, 70%);
+   color: hsl(245, 10%, 5%);
+   cursor: pointer;
 }
 
 @media only screen and (max-width: 500px) {
@@ -63,7 +97,7 @@ nav .btn {
       display: none;
    }
 
-   nav .btn {
+   nav button {
       display: flex;
       margin: 0;
       border-style: none;
@@ -79,11 +113,11 @@ nav .btn {
       width: 48px;
    }
 
-   nav .btn:hover {
+   nav button:hover {
       border-radius: 5px;
    }
 
-   nav .btn img {
+   nav button img {
       margin: 0;
       padding: 0;
    }
@@ -104,13 +138,14 @@ nav .btn {
 /* all of these are under .main */
 
 .mainlogo {
-   max-width: clamp(250px, 90%, 750px);
+   max-width: clamp(250px, 90%, 600px);
    border-radius: 10px;
 }
 
 .bigtext {
    text-align: center;
    font-size: 18px;
+   margin: 16px;
 }
 
 .btn {
