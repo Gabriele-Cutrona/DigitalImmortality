@@ -1,0 +1,90 @@
+body {
+   margin: 0;
+   color: white;
+   font-family: sans-serif;
+   background-color: hsl(245, 10%, 7%);
+}
+
+.title {
+   font-size: 36px;
+   text-align: center;
+}
+
+.subtitle {
+   font-size: 24px;
+   text-align: center;
+   margin-left: 8px;
+   margin-right: 8px;
+}
+
+/* all of these are under .main */
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.mainlogo {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: clamp(250px, 90%, 650px);
+}
+
+.mainlogo img {
+   max-width: clamp(250px, 90%, 650px);
+   border-radius: 10px;
+}
+
+.bigtext {
+   text-align: center;
+   font-size: 18px;
+   margin: 20px;
+}
+
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.btn a {
+   color: hsl(245, 10%, 7%);
+   text-decoration: none;
+   background-color: hsl(250, 80%, 70%);
+   border-radius: 5px;
+   padding: 15px;
+   margin-top: 5%;
+   font-weight: 500;
+   transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+
+.btn a:hover {
+   background-color: hsl(250, 80%, 60%);
+   transform: translateY(-12px);
+   color: white;
+}
+
+@media only screen and (min-width: 600px) {
+   .main {
+      flex-direction: row;
+   }
+
+   .bigtext {
+      font-size: 24px;
+   }
+
+   .grow {
+      max-width: 50%;
+   }
+
+   .btn a {
+      padding: 25px 35px 25px 35px;
+      font-size: 20px;
+   }
+
+}
+
+/* End of items under .main */
