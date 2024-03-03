@@ -4,6 +4,10 @@ const closeBtn = document.querySelector("nav .close");
 
 dropdown.addEventListener("click", () => {
    dialog.showModal();
+   dropdown.style.transform = "scale(0.9)";
+   dropdown.addEventListener("transitionend", () => {
+      dropdown.style.transform = "scale(1)"
+   });
 });
 
 closeBtn.addEventListener("click", () => {
