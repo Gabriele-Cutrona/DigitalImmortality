@@ -84,9 +84,9 @@ nav a {
    color: hsl(250, 80%, 70%);
    padding: 8px;
    text-decoration: none;
-   border-radius: 10px;
+   border-radius: 5px;
    transition: all 0.3s;
-   border-width: 3px;
+   border-width: 2px;
    border-color: hsl(250, 80%, 70%);
    border-style: solid;
 }
@@ -122,7 +122,7 @@ nav a:active {
    background-color: hsl(250, 80%, 70%);
    color: hsl(245, 10%, 5%);
    cursor: pointer;
-   border-radius: 10px;
+   border-radius: 5px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -357,13 +357,14 @@ footer a:hover {
 #dontOpen {
    font-size: 32px;
    cursor: pointer;
+   transition: color 0.3s;
 }
 
 .fake404 {
    text-align: center;
    display: flex;
    flex-direction: column;
-   height: 50dvh;
+   height: 75dvh;
    justify-content: center;
    align-items: center;
    font-family: serif;

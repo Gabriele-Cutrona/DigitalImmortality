@@ -5,18 +5,34 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Capitolo 3</title>
       <link rel="stylesheet" href="style.css" />
+      <script src="script.js" defer></script>
+      <script src="c3.js" defer></script>
    </head>
    <body>
       <nav>
-         <a href="index.html" class="Home">HomePage</a>
+         <a href="index.html" class="homebtn">
+            <img src="imgs/icons/home.png" alt="Home button" />
+         </a>
          <ul>
-            <li><a href="Chapter1.html">Capitolo 1</a></li>
-            <li><a href="Chapter2.html">Capitolo 2</a></li>
-            <li><a href="Chapter3.html">Capitolo 3</a></li>
-            <li><a href="">Fonti</a></li>
+            <a href="Chapter1.html">Capitolo 1</a>
+            <a href="Chapter2.html">Capitolo 2</a>
+            <a href="Chapter3.html">Capitolo 3</a>
+            <a href="Sources.html">Fonti</a>
          </ul>
+         <dialog>
+            <div>
+               <a href="Chapter1.html">Capitolo 1</a>
+               <a href="Chapter2.html">Capitolo 2</a>
+               <a href="Chapter3.html">Capitolo 3</a>
+               <a href="Sources.html">Fonti</a>
+               <a class="close">Chiudi!</a>
+            </div>
+         </dialog>
+         <button class="dropdown">
+            <img src="imgs/icons/dropdown.png" alt="Dropdown menu" />
+         </button>
       </nav>
-      <div class="cp">
+      <article class="chapterText">
          <p>
             Il ragazzo riuscì a infiltrarsi nel laboratorio di nascosto, non
             quello degli alunni, ma quello della scuola, dove il sito era
@@ -67,7 +83,8 @@
             sempre, se vuoi che io ci creda, fammi entrare, vado io a
             ritrovarlo"
          </p>
-         <p>Al che il vecchio professore rispose: "Ci sei già dentro"</p>
-      </div>
+         <p>Al che il vecchio professore rispose:</p>
+         <h1 style="font-size: 32px; cursor: pointer;" id="alreadyIn">"Ci sei già dentro"</h1>
+      </article>
    </body>
 </html>
