@@ -23,7 +23,7 @@ const dontOpen = document.querySelector("#dontOpen");
 
 dontOpen.addEventListener("mouseover", () => {
    dontOpen.style.color = "red";
-   dontOpen.textContent = "Passa al prossimo Capitolo"
+   dontOpen.textContent = "Passa al prossimo Capitolo";
 });
 
 dontOpen.addEventListener("mouseout", () => {

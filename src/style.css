@@ -330,6 +330,7 @@ footer a:hover {
 
 .chapterText {
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
 }
@@ -345,6 +346,7 @@ footer a:hover {
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-bottom: 16px;
 }
 
 .chapterImage img {
@@ -355,4 +357,14 @@ footer a:hover {
 #dontOpen {
    font-size: 32px;
    cursor: pointer;
+}
+
+.fake404 {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   height: 50dvh;
+   justify-content: center;
+   align-items: center;
+   font-family: serif;
 }
