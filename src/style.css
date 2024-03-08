@@ -327,3 +327,32 @@ footer a:hover {
    }
 }
 /* END FOOTER */
+
+.chapterText {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.chapterText p {
+   line-height: 2;
+   margin: 32px;
+   font-size: 24px;
+   width: clamp(0px, 80%, 1500px);
+}
+
+.chapterImage {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.chapterImage img {
+   width: clamp(0px, 80%, 1500px);
+   border-radius: 8px;
+}
+
+#dontOpen {
+   font-size: 32px;
+   cursor: pointer;
+}
