@@ -7,7 +7,7 @@ alreadyIn.addEventListener("mouseover", () => {
 
 alreadyIn.addEventListener("mouseout", () => {
    alreadyIn.style.color = "white";
-   alreadyIn.textContent = "\"Ci sei già dentro\"";
+   alreadyIn.textContent = '"Ci sei già dentro"';
 });
 
 alreadyIn.addEventListener("click", () => {

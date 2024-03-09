@@ -18,3 +18,10 @@ closeBtn.addEventListener("click", () => {
       dialog.removeEventListener("animationend", closeDialog);
    });
 });
+
+const html = document.querySelector("html");
+const themeChange = document.querySelector(".themeChange");
+
+themeChange.addEventListener("click", () => {
+   html.id = html.id  === "dark" ? "light" : "dark";
+});
