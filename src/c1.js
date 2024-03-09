@@ -6,7 +6,7 @@ dontOpen.addEventListener("mouseover", () => {
 });
 
 dontOpen.addEventListener("mouseout", () => {
-   dontOpen.style.color = "white";
+   dontOpen.style.color = "var(--text)";
    dontOpen.textContent = "NON MI APRIRE";
 });
 

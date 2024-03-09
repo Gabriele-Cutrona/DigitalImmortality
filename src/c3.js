@@ -6,7 +6,7 @@ alreadyIn.addEventListener("mouseover", () => {
 });
 
 alreadyIn.addEventListener("mouseout", () => {
-   alreadyIn.style.color = "white";
+   alreadyIn.style.color = "var(--text)";
    alreadyIn.textContent = '"Ci sei già dentro"';
 });
 

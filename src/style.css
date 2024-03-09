@@ -5,8 +5,8 @@
 html#dark {
    --primary: hsl(250, 80%, 70%);
    --secondary: hsl(250, 80%, 60%);
-   --bg: hsl(245, 10%, 5%);
-   --bg-darker: hsl(245, 10%, 7%);
+   --bg: hsl(245, 10%, 7%);
+   --bg-darker: hsl(245, 10%, 5%);
    --text: white;
 }
 
@@ -14,7 +14,7 @@ html#light {
    --primary: hsl(250, 80%, 70%);
    --secondary: hsl(250, 80%, 60%);
    --bg: hsl(245, 10%, 100%);
-   --bg-lighter: hsl(245, 10%, 7%);
+   --bg-darker: hsl(245, 10%, 95%);
    --text: black;
 }
 
@@ -22,10 +22,13 @@ body {
    margin: 0;
    color: var(--text);
    font-family: sans-serif;
-   background-color: var(--bg-darker);
+   background-color: var(--bg);
    min-height: 100dvh;
    display: flex;
    flex-direction: column;
+   transition:
+      background-color 0.2s,
+      color 0.2s;
 }
 
 /* NAVBAR */
@@ -34,10 +37,11 @@ nav {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: var(--bg);
+   background-color: var(--bg-darker);
    height: 64px;
    top: 0;
    width: 100%;
+   transition: background-color 0.2s;
 }
 
 nav img {
@@ -53,7 +57,28 @@ nav ul {
    padding: 0;
 }
 
+nav ul .themeChange {
+   background-color: var(--primary);
+   padding: 4px;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   transition: transform 0.1s;
+}
+
+nav ul .themeChange:hover {
+   transform: scale(1.1);
+}
+
+nav ul .themeChange:active {
+   transform: scale(0.9);
+}
+
 nav .dropdown {
+   display: none;
+}
+
+nav .themeChangeMobile {
    display: none;
 }
 
@@ -81,7 +106,7 @@ nav dialog {
    border-style: none;
    box-shadow: 0px 0px 10px black;
    border-radius: 4px;
-   background-color: var(--bg-darker);
+   background-color: var(--bg);
    animation: FadeIn 0.2s;
 }
 
@@ -96,7 +121,7 @@ nav a {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: var(--bg-darker);
+   background-color: var(--bg);
    color: var(--primary);
    padding: 8px;
    text-decoration: none;
@@ -109,7 +134,7 @@ nav a {
 
 nav a:hover {
    background-color: var(--primary);
-   color: var(--bg);
+   color: var(--bg-darker);
    transform: scale(1.05);
 }
 
@@ -131,12 +156,14 @@ nav a:active {
 }
 
 .homebtn:active {
+   background-color: transparent;
+   border-style: none;
    transform: scale(0.9);
 }
 
 .close {
    background-color: var(--primary);
-   color: var(--bg);
+   color: var(--bg-darker);
    cursor: pointer;
    border-radius: 5px;
    display: flex;
@@ -149,11 +176,11 @@ nav a:active {
 }
 
 .close:hover {
-   background-color: var(--bg);
+   background-color: var(--bg-darker);
    color: var(--primary);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
    nav ul {
       display: none;
    }
@@ -169,14 +196,36 @@ nav a:active {
       cursor: pointer;
       background-color: var(--primary);
       border-radius: 10px;
-      transition: transform 0.5s;
+      transition: transform 0.1s;
       height: 46px;
       width: 48px;
+   }
+
+   nav .dropdown:hover {
+      transform: scale(1.1);
    }
 
    nav .dropdown img {
       margin: 0;
       padding: 0;
+   }
+
+   nav .themeChangeMobile {
+      display: flex;
+      background-color: var(--primary);
+      padding: 4px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.1s;
+   }
+
+   nav .themeChangeMobile:hover {
+      transform: scale(1.1);
+   }
+
+   nav .themeChangeMobile:active {
+      transform: scale(0.9);
    }
 }
 
@@ -214,7 +263,7 @@ nav a:active {
 }
 
 .btn a {
-   color: var(--bg-darker);
+   color: var(--bg);
    text-decoration: none;
    background-color: var(--primary);
    border-style: solid;
@@ -231,7 +280,7 @@ nav a:active {
 }
 
 .btn a:hover {
-   background-color: var(--bg-darker);
+   background-color: var(--bg);
    transform: translateY(-12px);
    color: var(--primary);
 }
@@ -311,7 +360,7 @@ nav a:active {
 
 /* FOOTER */
 footer {
-   background-color: var(--bg);
+   background-color: var(--bg-darker);
    margin-top: auto;
 }
 
@@ -372,7 +421,7 @@ footer a:hover {
    border-radius: 8px;
 }
 
-#dontOpen {
+#dontOpen, #alreadyIn {
    font-size: 32px;
    cursor: pointer;
    transition: color 0.3s;

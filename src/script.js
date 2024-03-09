@@ -6,7 +6,7 @@ dropdown.addEventListener("click", () => {
    dialog.showModal();
    dropdown.style.transform = "scale(0.9)";
    dropdown.addEventListener("transitionend", () => {
-      dropdown.style.transform = "scale(1)";
+      dropdown.style.transform = "";
    });
 });
 
@@ -23,5 +23,15 @@ const html = document.querySelector("html");
 const themeChange = document.querySelector(".themeChange");
 
 themeChange.addEventListener("click", () => {
-   html.id = html.id  === "dark" ? "light" : "dark";
+   html.id = html.id === "dark" ? "light" : "dark";
+   themeChange.src =
+      html.id === "light" ? "imgs/icons/light.svg" : "imgs/icons/dark.svg";
+});
+
+const themeChangeMobile = document.querySelector(".themeChangeMobile");
+
+themeChangeMobile.addEventListener("click", () => {
+   html.id = html.id === "dark" ? "light" : "dark";
+   themeChangeMobile.src =
+      html.id === "light" ? "imgs/icons/light.svg" : "imgs/icons/dark.svg";
 });
