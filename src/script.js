@@ -21,11 +21,21 @@ closeBtn.addEventListener("click", () => {
 
 const html = document.querySelector("html");
 const themeChange = document.querySelector(".themeChange");
+const HomeBtnImg = document.querySelector(".homebtn img");
+const DropdownImg = document.querySelector(".dropdown img");
 
 themeChange.addEventListener("click", () => {
    html.id = html.id === "dark" ? "light" : "dark";
    themeChange.src =
-      html.id === "light" ? "imgs/icons/light.svg" : "imgs/icons/dark.svg";
+      html.id === "light" ? "imgs/icons/lightlight.svg" : "imgs/icons/dark.svg";
+   HomeBtnImg.src =
+      html.id === "light"
+         ? "imgs/icons/homelight.svg"
+         : "imgs/icons/homedark.svg";
+   DropdownImg.src =
+      html.id === "light"
+         ? "imgs/icons/dropdownlight.svg"
+         : "imgs/icons/dropdowndark.svg";
 });
 
 const themeChangeMobile = document.querySelector(".themeChangeMobile");
@@ -33,5 +43,13 @@ const themeChangeMobile = document.querySelector(".themeChangeMobile");
 themeChangeMobile.addEventListener("click", () => {
    html.id = html.id === "dark" ? "light" : "dark";
    themeChangeMobile.src =
-      html.id === "light" ? "imgs/icons/light.svg" : "imgs/icons/dark.svg";
+      html.id === "light" ? "imgs/icons/lightlight.svg" : "imgs/icons/dark.svg";
+   HomeBtnImg.src =
+      html.id === "light"
+         ? "imgs/icons/homelight.svg"
+         : "imgs/icons/homedark.svg";
+   DropdownImg.src =
+      html.id === "light"
+         ? "imgs/icons/dropdownlight.svg"
+         : "imgs/icons/dropdowndark.svg";
 });

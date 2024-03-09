@@ -146,7 +146,8 @@ nav a:active {
    background-color: transparent;
    border-style: none;
    transition: transform 0.1s;
-   padding: 16px;
+   margin-left: 16px;
+   padding: 0;
 }
 
 .homebtn:hover {
@@ -421,7 +422,8 @@ footer a:hover {
    border-radius: 8px;
 }
 
-#dontOpen, #alreadyIn {
+#dontOpen,
+#alreadyIn {
    font-size: 32px;
    cursor: pointer;
    transition: color 0.3s;
@@ -438,3 +440,48 @@ footer a:hover {
 }
 
 /* END CHAPTERS */
+
+/* SOURCES */
+
+.sourceArticle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.cards {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 32px;
+   margin-left: 16px;
+   margin-right: 16px;
+   justify-items: center;
+   max-width: 2000px;
+}
+
+.card {
+   background-color: var(--bg-darker);
+   padding: 1rem;
+   border-radius: 0.5rem;
+   transition: transform 0.2s;
+   width: 90%;
+}
+
+.card:hover {
+   transform: scale(1.05);
+}
+
+.card h1 {
+   font-size: 32px;
+}
+
+.card a {
+   color: var(--primary);
+}
+
+.card a:hover {
+   color: var(--secondary);
+}
+
+/* END SOURCES */
