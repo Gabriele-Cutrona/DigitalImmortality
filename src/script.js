@@ -24,10 +24,8 @@ const themeChange = document.querySelector(".themeChange");
 const HomeBtnImg = document.querySelector(".homebtn img");
 const DropdownImg = document.querySelector(".dropdown img");
 
-themeChange.addEventListener("click", () => {
+function switchTheme() {
    html.id = html.id === "dark" ? "light" : "dark";
-   themeChange.src =
-      html.id === "light" ? "imgs/icons/lightlight.svg" : "imgs/icons/dark.svg";
    HomeBtnImg.src =
       html.id === "light"
          ? "imgs/icons/homelight.svg"
@@ -36,20 +34,18 @@ themeChange.addEventListener("click", () => {
       html.id === "light"
          ? "imgs/icons/dropdownlight.svg"
          : "imgs/icons/dropdowndark.svg";
+}
+
+themeChange.addEventListener("click", () => {
+   switchTheme();
+   themeChange.src =
+      html.id === "light" ? "imgs/icons/lightlight.svg" : "imgs/icons/dark.svg";
 });
 
 const themeChangeMobile = document.querySelector(".themeChangeMobile");
 
 themeChangeMobile.addEventListener("click", () => {
-   html.id = html.id === "dark" ? "light" : "dark";
+   switchTheme();
    themeChangeMobile.src =
       html.id === "light" ? "imgs/icons/lightlight.svg" : "imgs/icons/dark.svg";
-   HomeBtnImg.src =
-      html.id === "light"
-         ? "imgs/icons/homelight.svg"
-         : "imgs/icons/homedark.svg";
-   DropdownImg.src =
-      html.id === "light"
-         ? "imgs/icons/dropdownlight.svg"
-         : "imgs/icons/dropdowndark.svg";
 });

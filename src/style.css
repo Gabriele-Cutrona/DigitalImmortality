@@ -439,6 +439,17 @@ footer a:hover {
    font-family: serif;
 }
 
+.lightning {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 32px;
+}
+
+.lightning img {
+   width: 100px;
+}
+
 /* END CHAPTERS */
 
 /* SOURCES */
@@ -460,12 +471,26 @@ footer a:hover {
    max-width: 2000px;
 }
 
+@media only screen and (max-width: 1300px) {
+   .cards {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media only screen and (max-width: 650px) {
+   .cards {
+      grid-template-columns: 1fr;
+   }
+}
+
 .card {
    background-color: var(--bg-darker);
    padding: 1rem;
    border-radius: 0.5rem;
    transition: transform 0.2s;
    width: 90%;
+   display: flex;
+   flex-direction: column;
 }
 
 .card:hover {
@@ -484,4 +509,115 @@ footer a:hover {
    color: var(--secondary);
 }
 
+.bookmark {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 32px;
+}
+
+.bookmark img {
+   width: 100px;
+}
+
+@media only screen and (max-width: 650px) {
+   .bookmark {
+      flex-direction: column;
+      gap: 0;
+      margin-top: 32px;
+   }
+}
+
+.github {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   margin-top: auto;
+}
+
+.github a {
+   background: var(--bg-darker);
+   padding: 16px 48px 16px 48px;
+   border: solid 2px var(--secondary);
+   border-radius: 8px;
+   text-decoration: none;
+   font-size: 24px;
+   color: var(--text);
+   font-weight: 600;
+   transition: all 0.2s;
+}
+
+.github a:hover {
+   background: var(--secondary);
+   color: var(--bg-darker);
+   transform: translateY(-6px);
+}
+
 /* END SOURCES */
+
+.buy {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 32px;
+}
+
+.buy div {
+   display: flex;
+   gap: 16px;
+}
+
+.buy div button {
+   border-radius: 8px;
+   padding: 16px 32px 16px 32px;
+   font-size: 32px;
+   background: var(--bg);
+   color: var(--text);
+   transition: all 0.2s;
+   cursor: pointer;
+}
+
+.amazon {
+   border: solid 2px hsl(39, 97%, 49%);
+}
+
+.amazon:hover {
+   background: hsl(39, 97%, 49%);
+   color: var(--bg);
+   transform: translateY(-6px);
+}
+
+.ebay {
+   border: solid 2px hsl(226, 83%, 53%);
+}
+
+.ebay:hover {
+   background: hsl(226, 83%, 53%);
+   color: var(--bg);
+   transform: translateY(-6px);
+}
+
+.ebook {
+   border: solid 2px var(--secondary);
+}
+
+.ebook:hover {
+   background: var(--secondary);
+   color: var(--bg);
+   transform: translateY(-6px);
+}
+
+@media only screen and (max-width: 850px) {
+   .buy div {
+      flex-direction: column;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .buy div button {
+      border-radius: 4px;
+      padding: 8px 16px 8px 16px;
+      font-size: 16px;
+   }
+}
