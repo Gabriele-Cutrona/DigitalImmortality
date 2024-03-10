@@ -626,3 +626,23 @@ footer a:hover {
       font-size: 16px;
    }
 }
+
+.iconsContainerOut {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 32px;
+   margin-bottom: 16px;
+}
+
+.iconsContainer {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 16px;
+   justify-items: center;
+   align-items: center;
+}
+
+.iconsContainer img {
+   max-width: 80px;
+}
