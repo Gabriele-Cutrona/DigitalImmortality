@@ -233,8 +233,17 @@ nav a:active {
 /* END NAVBAR */
 
 .title {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.title h1 {
    font-size: 36px;
    text-align: center;
+   background-color: var(--secondary);
+   border-radius: 8px;
+   padding: 16px;
 }
 
 .subtitle {
